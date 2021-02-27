@@ -9,10 +9,7 @@ html {
 }
 
 .slider {
-    background-image: url('http://www.nicdarkthemes.com/themes/travel/wp/demo/love-travel/wp-content/uploads/sites/3/2018/11/parallax-2.jpg');
-    background-repeat: no-repeat;
-    background-position:center bottom;
-    background-size: cover;
+    background: url('http://www.nicdarkthemes.com/themes/travel/wp/demo/love-travel/wp-content/uploads/sites/3/2018/11/parallax-2.jpg') center bottom / cover no-repeat;
     padding-top: 50%;
     position: relative;
 }
@@ -62,10 +59,9 @@ html {
 .download-link {
     color: #fff;
     text-decoration: none;
-
 }
 
-.content-section {
+.content{
     width: 1000px;
     max-width: 100%;
     margin-left: auto;
@@ -91,10 +87,13 @@ html {
     color: #757575;
 }
 
+.content-section {
+    display: flex;
+}
+
 .content-item {
     margin-top: 35px;
-    width: 32.3333%;
-    display: inline-block;
+    width: 33.3333%;
     padding: 0 15px;
 }
 
