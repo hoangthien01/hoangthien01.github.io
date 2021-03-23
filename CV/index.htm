@@ -5,112 +5,503 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CV</title>
-    <link rel="stylesheet" href="./style.css">
+    <title>HO HOANG THIEN</title>
+    <link rel="shortcut icon" href="./favicon-32x32.png" type="image/x-icon">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.11"></script>
-
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://kit.fontawesome.com/bb12d3ceff.js" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 </head>
 
 <body>
-    <!-- <div class="container">
-        <div class="grid">
-            <div class="row">
-                <div class="col-full">
-                    <div id="home">
-                        <div class="home-content">
-                            <h1 class="home-name">HOANG
-                                <span>THIEN</span>
-                            </h1>
-                            <h4 class="home-headline">I'm a Developer</h4>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div> -->
-
     <div class="container">
+        <div class="navbar ">
+            <div class="navbar-header ">
+                <a href="#home ">
+                    <img class="navbar-img__link " src="./120658773_786726238843686_8692691271608569961_n.jpg " alt=" ">
+                </a>
+                <span class="navbar-name ">Hoang Thien</span>
+                <p class="navbar-status ">Available for work</p>
+
+            </div>
+            <ul class="navbar-list">
+                <li class="navbar-item active">
+                    <a href="#home" class="navbar-item__link  ">Home</a>
+                </li>
+                <li class="navbar-item ">
+                    <a href="#about " class="navbar-item__link ">About</a>
+                </li>
+                <li class="navbar-item">
+                    <a href="#education" class="navbar-item__link">Education</a>
+                </li>
+                <li class="navbar-item ">
+                    <a href="#skill " class="navbar-item__link ">Skill</a>
+                </li>
+                <li class="navbar-item ">
+                    <a href="#portfolio " class="navbar-item__link ">Portfolio</a>
+                </li>
+                <li class="navbar-item ">
+                    <a href="#blog " class="navbar-item__link ">Blog</a>
+                </li>
+                <li class="navbar-item ">
+                    <a href="#contact " class="navbar-item__link ">Contact</a>
+                </li>
+            </ul>
+        </div>
         <div class="grid">
-            <div class="row">
-                <div class="col-full">
-                    <div id="home">
-                        <div class="home-content">
-                            <h1 class="home-name">HOANG
-                                <span>THIEN</span>
-                            </h1>
-                            <h4 id="typed-strings" class="home-headline">I'm a Web Developer</h4>
-                        </div>
-                    </div>
-                </div>
-                <section class="single-section" id="about">
-                    <div class="section-heading">
-                        <h2 class="section-title">About me</h2>
-                        <p class="section-description">Get to know me</p>
-                    </div>
+            <section id="home">
+                <div class="home-bg">
                     <div class="row">
-                        <div class="col-5">
-                            <div class="about-avatar">
-                                <img class="about-img" src="./120658773_786726238843686_8692691271608569961_n.jpg" alt="">
+                        <div class="col-full">
+                            <div class="home-content">
+                                <h1 class="home-name">HOANG
+                                    <span>THIEN</span>
+                                </h1>
+                                <span class="home-headline">I'm a</span>
+                                <div id="typed-strings">
+                                    <p> Web Developer </p>
+                                </div>
+                                <span id="typed"></span>
                             </div>
                         </div>
-                        <div class="col-7 about-content">
-                            <div class="content-subtitle">Who am i?</div>
-                            <div class="content-title">I'm Hoang Thien, a Web Developer</div>
-                            <div class="content-description">
-                                <p> I am a freelancer based in the United Kingdom and i have been building noteworthy UX/UI designs and websites for years, which comply with the latest design trends. I help convert a vision and an idea into meaningful and
-                                    useful products. Having a sharp eye for product evolution helps me prioritize tasks, iterate fast and deliver faster.</p>
-                            </div>
-                            <div class="content-info">
-                                <div class="row">
-                                    <div class="col-6 single-info"><span>Name:</span> Ho Hoang Thien</div>
-                                    <div class="col-6 single-info"><span>Email:</span>
-                                        <a href="thienho549@gmail.com">thienho549@gmail.com</a> </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-6 "><span>Age:</span> 20</div>
-                                    <div class="col-6 "><span>From:</span> Da Nang, VN</div>
-                                </div>
-                            </div>
-                            <a class="btn content-dowmload" href="">Download CV</a>
-                            <a href="" class="btn content-work">My Work</a>
-                        </div>
-                </section>
-                </div>
-                <div class="navbar ">
-                    <div class="navbar-header ">
-                        <a href="#home ">
-                            <img class="navbar-img__link " src="./120658773_786726238843686_8692691271608569961_n.jpg " alt=" ">
-                        </a>
-
-                        <span class="navbar-name ">Hoang Thien</span>
-                        <p class="navbar-status ">Available for work</p>
-
                     </div>
+                </div>
+            </section>
+            <section class="single-section" id="about">
+                <div class="section-heading">
+                    <h2 class="section-title">About me</h2>
+                    <p class="section-description">Get to know me</p>
+                </div>
+                <div class="row">
+                    <div class="col-5">
+                        <div class="about-avatar">
+                            <img class="about-img" src="./120658773_786726238843686_8692691271608569961_n.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-7 about-content">
+                        <div class="content-subtitle">Who am i?</div>
+                        <div class="content-title">
+                            <p>I'm Hoang Thien, a Web Developer</p>
+                        </div>
+                        <div class="content-description">
+                            <p> I am a freelancer based in the United Kingdom and i have been building noteworthy UX/UI designs and websites for years, which comply with the latest design trends. I help convert a vision and an idea into meaningful and useful
+                                products. Having a sharp eye for product evolution helps me prioritize tasks, iterate fast and deliver faster.</p>
+                        </div>
+                        <div class="content-info">
+                            <div class="row">
+                                <div class="col-6 single-info"><span>Name:</span> Ho Hoang Thien</div>
+                                <div class="col-6 single-info"><span>Email:</span>
+                                    <a href="thienho549@gmail.com">thienho549@gmail.com</a> </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-6 "><span>Date Of Birth:</span> 12/04/2001</div>
+                                <div class="col-6 "><span>From:</span> Da Nang, VN</div>
+                            </div>
+                        </div>
+                        <a class="btn content-dowmload" href="">Download CV</a>
+                        <a href="" class="btn content-work">My Work</a>
+                    </div>
+            </section>
+            <section class="single-section alt-bg" id="education">
+                <div class="section-heading">
+                    <h2 class="section-title">Education</h2>
+                    <p class="section-description"></p>
+                </div>
+                <div class="education-content">
 
-                    <ul class="navbar-list ">
-                        <li class="navbar-item ">
-                            <a href=" " class="navbar-item__link ">Home</a>
+                    <div class="row education-content-info">
+                        <div class="col-7">
+                            <h3 class="content-heading">LE HONG PHONG HIGHT SCHOOL</h3>
+                            <h4 class="content-subheading">STUDENT</h4>
+                            <div class="content-description">Class 10 11 12</div>
+                        </div>
+                        <div class="col-5">
+                            <p>September 2016 - June 2019</p>
+                        </div>
+                    </div>
+                    <div class="row education-content-info">
+                        <div class="col-7">
+                            <h3 class="content-heading">DA NANG UNIVERSITY OF TECHNOLOGY</h3>
+                            <h4 class="content-subheading">IT STUDENT</h4>
+                            <div class="content-description">19TCLC_DT6</div>
+                        </div>
+                        <div class="col-5">
+                            <p>September 2019 - Now</p>
+                        </div>
+                    </div>
+                    <div class="row education-content-info">
+                        <div class="col-7">
+
+                            <h3 class="content-heading">S_GROUP</h3>
+                            <h4 class="content-subheading">IT MEMBER</h4>
+                            <div class="content-description">Learing (HTML,CSS,JS,FW)</div>
+                        </div>
+                        <div class="col-5">
+                            <p>JANUARY 2020 - Now</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="single-section" id="skill">
+                <div class="section-heading">
+                    <h2 class="section-title">SKILLS</h2>
+                    <p class="section-description">Progamming Languages</p>
+                </div>
+                <div class="skill-content">
+                    <h2>Progaming Languages & Tools</h2>
+                    <ul class="skill-list">
+                        <li class="skill-item">
+                            <i class="fab fa-html5"></i>
                         </li>
-                        <li class="navbar-item ">
-                            <a href="#about" class="navbar-item__link ">About</a>
+                        <li class="skill-item">
+                            <i class="fab fa-css3-alt"></i>
                         </li>
-                        <li class="navbar-item ">
-                            <a href=" " class="navbar-item__link ">Skill</a>
+                        <li class="skill-item">
+                            <i class="fab fa-js-square"></i>
                         </li>
-                        <li class="navbar-item ">
-                            <a href=" " class="navbar-item__link ">Contact</a>
+                        <li class="skill-item">
+                            <i class="fab fa-java"></i>
+                        </li>
+                        <li class="skill-item">
+                            <i class="fab fa-github-square"></i>
                         </li>
                     </ul>
+                    <h2>Level</h2>
+                    HTML:
+                    <div class="level-bar">
+                        <div class="level-bar-inside" style="width: 65%;"></div>
+                    </div>
+                    CSS:
+                    <div class="level-bar">
+                        <div class="level-bar-inside" style="width:60%;"></div>
+                    </div>
+                    JAVASCRIPT:
+                    <div class="level-bar">
+                        <div class="level-bar-inside" style="width: 50%;"></div>
+                    </div>
+                    JAVA:
+                    <div class="level-bar">
+                        <div class="level-bar-inside" style="width: 55%;"></div>
+                    </div>
+                    ENGLISH:
+                    <div class="level-bar">
+                        <div class="level-bar-inside" style="width: 55%;"></div>
+                    </div>
                 </div>
-            </div>
+            </section>
+            <section class="single-section  alt-bg" id="portfolio">
+                <div class="section-heading">
+                    <h2 class="section-title">PORTFOLIO</h2>
+                    <p class="section-description">Showcasing some of my nest work</p>
+                </div>
+                <div class="row">
+                    <div class="col-full">
+                        <ul class="portfolio-list">
+                            <li class="portfolio-list-item active1" data-filter="All">All</li>
+                            <li class="portfolio-list-item" data-filter="Branch">Branch</li>
+                            <li class="portfolio-list-item" data-filter="Design">Design</li>
+                            <li class="portfolio-list-item" data-filter="Photo">Photo</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row portfolio-content">
+                    <div class="col-4 portfolio-item Design All">
+                        <a href="" class="portfolio-item__link">
+                            <div class="portfolio-wrapper">
+                                <img src="./item-1.jpg" alt="" class="portfolio-img">
+                                <div class="portfolio-info">
+                                    <h6>Label Tag Mockup</h6>
+                                    <span>MOre info</span>
+                                </div>
+                                <div class="hidden">
+                                    <div class="img">
+                                        <img src="./item-1.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-4 portfolio-item Photo All">
+                        <a href="" class="portfolio-item__link">
+                            <div class="portfolio-wrapper">
+                                <img src="./item-2.jpg" alt="" class="portfolio-img">
+                                <div class="portfolio-info">
+                                    <h6>Label Tag Mockup</h6>
+                                    <span>MOre info</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-4 portfolio-item Design All">
+                        <a href="" class="portfolio-item__link">
+                            <div class="portfolio-wrapper">
+                                <img src="./item-3.jpg" alt="" class="portfolio-img">
+                                <div class="portfolio-info">
+                                    <h6>Label Tag Mockup</h6>
+                                    <span>MOre info</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-4 portfolio-item Branch All">
+                        <a href="" class="portfolio-item__link">
+                            <div class="portfolio-wrapper">
+                                <img src="./item-4.jpg" alt="" class="portfolio-img">
+                                <div class="portfolio-info">
+                                    <h6>Label Tag Mockup</h6>
+                                    <span>MOre info</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-4 portfolio-item Branch All">
+                        <a href="" class="portfolio-item__link">
+                            <div class="portfolio-wrapper">
+                                <img src="./item-5.jpg" alt="" class="portfolio-img">
+                                <div class="portfolio-info">
+                                    <h6>Label Tag Mockup</h6>
+                                    <span>MOre info</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-4 portfolio-item Photo All">
+                        <a href="" class="portfolio-item__link">
+                            <div class="portfolio-wrapper">
+                                <img src="./item-6.jpg" alt="" class="portfolio-img">
+                                <div class="portfolio-info">
+                                    <h6>Label Tag Mockup</h6>
+                                    <span>MOre info</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </section>
+            <section class="single-section" id="blog">
+                <div class="section-heading">
+                    <h2 class="section-title">MY BLOG</h2>
+                    <p class="section-description">Check out my latest blog posts</p>
+                </div>
+                <div class="row">
+                    <div class="col-4 blog-post">
+                        <div class="blog-post-head">
+                            <img src="http://exill.dk/demo/codex/template/img/post-1.jpg" alt="" class="blog-post-img">
+                            <div class="blog-post-link">
+                                <a href="">
+                                    <i class="fas fa-link" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="blog-post-content">
+                            <a href="">
+                                <h2>Top tools for Photographers</h2>
+                            </a>
+                            <ul>
+                                <li>
+                                    <i class="fas fa-user-alt"></i> Mac Doe
+                                </li>
+                                <li>
+                                    <i class="fas fa-calendar-alt"></i>Aug 5, 2016
+                                </li>
+                                <li>
+                                    <i class="fas fa-comments"></i>3</li>
+                            </ul>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, porro rem quod illo quam, eum alias id, repellendus magni, quas.</p>
+                        </div>
+                    </div>
+                    <div class="col-4 blog-post">
+                        <div class="blog-post-head">
+                            <img src="http://exill.dk/demo/codex/template/img/post-2.jpg" alt="" class="blog-post-img">
+                            <div class="blog-post-link">
+                                <a href="">
+                                    <i class="fas fa-link" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="blog-post-content">
+                            <a href="">
+                                <h2>Take a tour of my office</h2>
+                            </a>
+                            <ul>
+                                <li>
+                                    <i class="fas fa-user-alt"></i> Mac Doe
+                                </li>
+                                <li>
+                                    <i class="fas fa-calendar-alt"></i>Aug 5, 2016
+                                </li>
+                                <li>
+                                    <i class="fas fa-comments"></i>3</li>
+                            </ul>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, porro rem quod illo quam, eum alias id, repellendus magni, quas.</p>
+                        </div>
+                    </div>
+                    <div class="col-4 blog-post">
+                        <div class="blog-post-head">
+                            <img src="http://exill.dk/demo/codex/template/img/post-3.jpg" alt="" class="blog-post-img">
+                            <div class="blog-post-link">
+                                <a href="">
+                                    <i class="fas fa-link" aria-hidden="true"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="blog-post-content">
+                            <a href="">
+                                <h2>How i became a Web Designer</h2>
+                            </a>
+                            <ul>
+                                <li>
+                                    <i class="fas fa-user-alt"></i> Mac Doe
+                                </li>
+                                <li>
+                                    <i class="fas fa-calendar-alt"></i>Aug 5, 2016
+                                </li>
+                                <li>
+                                    <i class="fas fa-comments"></i>3</li>
+                            </ul>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolore, porro rem quod illo quam, eum alias id, repellendus magni, quas.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="single-section alt-bg" id="contact">
+                <div class="section-heading">
+                    <div class="section-title">Get In Touch</div>
+                    <div class="section-description">Fell free to contact me anytime</div>
+                </div>
+                <div class="contact-form">
+                    <form action="">
+                        <div class="row">
+                            <div class="col-6 form-group">
+                                <input type="text" placeholder="Name" required class="form-control">
+                            </div>
+                            <div class="col-6 form-group">
+                                <input type="email" placeholder="Email" required class="form-control">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-full form-group">
+                                <input type="text" placeholder="Subject" required class="form-control">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-full form-group">
+                                <input type="text" placeholder="Message" required class="form-control contact-message">
+                            </div>
+                        </div>
+                    </form>
+                    <button class="btn contact-submit" type="submit">Send message</button>
+                </div>
+            </section>
+            <section class="single-section footer-section id=" footer ">
+                <div class="row footer-icon ">
+                    <div class="col-4 ">
+                        <i class="fas fa-map info-icon "></i>
+                        <p class="info-content ">
+                            <a href=" ">Da Nang, Viet Nam</a>
+                        </p>
+                    </div>
+                    <div class="col-4 ">
+                        <i class="fas fa-phone-alt info-icon "></i>
+                        <p class="info-content ">
+                            <a href="tel:+84 0334298720 ">+84 334298720</a>
+                        </p>
+                        </div>
+                    <div class="col-4 ">
+                        <i class="fas fa-paper-plane info-icon "></i>
+                        <p class="info-content ">
+                            <a href="mailto: thienho549@gmail.com ">thienho549@gmail.com</a>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row mini-footer ">
+                    <div class="socials-media ">
+                        <a href=" " class="twitter ">
+                            <i class="fab fa-twitter-square "></i>
+                        </a>
+                        <a href=" " class="instagram ">
+                            <i class="fab fa-instagram-square "></i>
+                        </a>
+                        <a href=" " class="linkedin ">
+                            <i class="fab fa-linkedin "></i>
+                        </a>
+                        <a href=" " class="youtube ">
+                            <i class="fab fa-youtube-square "></i>
+                        </a>
+                        <a href=" " class="github ">
+                            <i class="fab fa-github-square "></i>
+                        </a>
+                        <a href=" " class="facebook ">
+                            <i class="fab fa-facebook-square "></i>
+                        </a>
+                    </div>
+                    <p class="copyright-notice ">Copyright © 2019 CardX, all rights reserved. Developed by
+                        <span>  Hoang Thien.</span></p>                    
+                </div>
+            </section>
         </div>
 
-</body>
+        <script
+  src="https://code.jquery.com/jquery-3.6.0.js "
+  integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+  crossorigin=" anonymous "></script>
+        <script>
+            var typed = new Typed('#typed', {
+                stringsElement: '#typed-strings',
+                typeSpeed: 60,
+                backSpeed: 70,
+                loop: true
+            });
+        </script>
 
-<script>
-    var typed = new Typed('#typed', {
-        stringsElement: '#typed-strings'
-    });
-</script>
+        <script type="text/javascript ">
+        $(document).ready(function() {
+            $('.portfolio-list-item').click(function() {
+                const value = $(this).attr('data-filter');
+                if(value == 'all') {
+                    $('.portfolio-item').show('1000');
+                }
+                else {
+                    $('.portfolio-item').not('.'+value).hide('1000');
+                    $('.portfolio-item').filter('.'+value).show('1000');
+                }
+            })
+            
+            $('.portfolio-list-item').click(function() {
+                $(this).addClass('active1').siblings().removeClass('active1');
+            })
+        })
+        </script>
+      
+
+        <script>
+            window.addEventListener('scroll', event => {
+                let navigationLinks = document.querySelectorAll('ul li a');
+                let fromTop = window.scrollY;
+
+                navigationLinks.forEach(link => {
+                    let section = document.querySelector(link.hash);
+                    if (
+                        section.offsetTop <= fromTop &&
+                        section.offsetTop + section.offsetHeight > fromTop)
+                    {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+            });
+        </script>
+          
+        <script type="text/javascript ">
+            $(document).ready(function() {
+                $('.navbar-item').click(function() {
+                    $(this).addClass('active').siblings().removeClass('active');
+                })
+            })
+        </script>
+</body>
 
 </html>
