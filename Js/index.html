@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://kit.fontawesome.com/bb12d3ceff.js" crossorigin="anonymous"></script>
+        <title>Bai Tap Js</title>
+    </head>
+    <body>
+        <div class="container" >
+
+            <!-- Bai 1 -->
+            <section>
+                <div class="row">
+                        <i class="fas fa-dragon icon-dragon"></i>
+                    <div class="title">
+                        <P>BT1: Viết chương tình để hiển thị ngày giờ</P>
+                        <div class="title-link">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="row content">
+                    <div class="col-6">
+                        <button class="btn" onclick="startTime()">
+                            DateTime
+                        </button>
+                    </div>
+                    <div class="col-6">
+                        <div id="timer"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Bai 2 -->
+            <section>
+                <div class="row">
+                    <i class="fas fa-dragon icon-dragon"></i>
+                    <div class="title">
+                        <P>BT2: Viết chương trình để in ra ngày tháng năm theo các định dạng mm-dd-
+                            yyyy, mm/dd/yyyy, dd-mm-yyyy, dd/mm/yyyy
+                        </P>
+                        <div class="title-link">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row content">
+                    <div class="col-6">
+                        <button class="btn" onclick="Bai2()">
+                            Xem kết quả
+                        </button>
+                    </div>
+                    <div class="col-6">
+                        <div id="dd/mm/yyyy"> </div>
+                        <div id="mm/dd/yyyy"></div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Bai 3 -->
+            <section>
+                <div class="row">
+                    <i class="fas fa-dragon icon-dragon"></i>
+                    <div class="title">
+                        <P>BT3 : Viết chương trình JavaScript để kiểm tra xem một số nguyên đã cho có
+                            chuỗi chữ số tăng hay không                        
+                        </P>
+                        <div class="title-link">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row content">
+                    <div class="col-6">
+                     <input type="text" placeholder="Vui lòng nhập 1 chuỗi số nguyên" class="input" id="text">
+                     <button class="btn" onclick="Bai3()">
+                        Xem kết quả
+                    </button>
+                    </div>
+                    <div class="col-6">
+                        <div id="bai3"> </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Bai 4 -->
+            <section>
+                <div class="row">
+                    <i class="fas fa-dragon icon-dragon"></i>
+                    <div class="title">
+                        <P>BT4 : Viết một chương trình JavaScript để thay thế mọi ký tự trong một chuỗi đã
+                            cho với ký tự theo sau nó trong bảng chữ cái.                                               
+                        </P>
+                        <div class="title-link">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                </div>
+                    
+                <div class="row content">
+                    <div class="col-6">
+                     <input type="text" placeholder="Vui lòng nhập 1 chuỗi các chữ cái" class="input" id="text4">
+                     <button class="btn" onclick="Bai4()">
+                        Xem kết quả
+                    </button>
+                    </div>
+                    <div class="col-6">
+                        <div id="bai4"> </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Bai 5 -->
+            <section>
+                <div class="row">
+                    <i class="fas fa-dragon icon-dragon"></i>
+                    <div class="title">
+                        <P>BT5 : Viết chương trình JavaScript để tạo chuỗi bằng cách sử dụng ba ký tự ở
+                            giữa của một chuỗi có độ dài lẻ. Độ dài chuỗi phải lớn hơn hoặc bằng ba.                                                                     
+                        </P>
+                        <div class="title-link">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row content">
+                    <div class="col-6">
+                     <input type="text" placeholder="Vui lòng nhập 1 chuỗi ký tự có độ dài lẻ, độ dài chuỗi >= 3" class="input" id="text5">
+                     <button class="btn" onclick="Bai5()">
+                        Xem kết quả
+                    </button>
+                    </div>
+                    <div class="col-6">
+                        <div id="bai5"> </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Bai 6 -->
+            <section>
+                <div class="row">
+                    <i class="fas fa-dragon icon-dragon"></i>
+                    <div class="title">
+                        <P>BT6 : Viết chương trình hiển thị số xuất hiện nhiều lần nhất trong mảng  </P>
+                        <div class="title-link">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                </div>
+                    
+                <div class="row content">
+                    <div class="col-6">
+                     <input type="text" placeholder="Vui lòng nhập mảng các kí tự" class="input" id="text6">
+                     <button class="btn" onclick="Bai6()">
+                        Xem kết quả
+                    </button>
+                    </div>
+                    <div class="col-6">
+                        <div id="bai6"> </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Bai 7 -->
+            <section>
+                <div class="row">
+                    <i class="fas fa-dragon icon-dragon"></i>
+                    <div class="title">
+                        <P>BT7 : Viết chương trình để kiểm tra xem chuỗi chứa &#/39;java\&\#39; hay không </P>
+                        <div class="title-link">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row content">
+                    <div class="col-6">
+                     <input type="text" placeholder="Vui lòng nhập 1 chuỗi các ký tự" class="input" id="text7">
+                     <button class="btn" onclick="Bai7()">
+                        Xem kết quả
+                    </button>
+                    </div>
+                    <div class="col-6">
+                        <div id="bai7"> </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Bai 8 -->
+            <section>
+                <div class="row">
+                    <i class="fas fa-dragon icon-dragon"></i>
+                    <div class="title">
+                        <p>BT8 : Viết một hàm để lấy tên tháng từ một số cụ thể ( ví dụ : 1 – Tháng một )</p>
+                        <div class="title-link">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                </div>
+                    
+                <div class="row content">
+                    <div class="col-6">
+                     <input type="text" placeholder="Vui lòng nhập 1 số nguyên x ( 1 < x < 12 )" class="input" id="text8">
+                     <button class="btn" onclick="Bai8()">
+                        Xem kết quả
+                    </button>
+                    </div>
+                    <div class="col-6">
+                        <div id="bai8"> </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Bai 9 -->
+            <section>
+                <div class="row">
+                    <i class="fas fa-dragon icon-dragon"></i>
+                    <div class="title">
+                        <p>BT9: Viết một hàm JavaScript nhập một chuỗi và tìm từ dài nhất trong chuỗi</p>
+                        <div class="title-link">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row content">
+                    <div class="col-6">
+                     <input type="text" placeholder="Vui lòng nhập 1 chuỗi" class="input" id="text9">
+                     <button class="btn" onclick="Bai9()">
+                        Xem kết quả
+                    </button>
+                    </div>
+                    <div class="col-6">
+                        <div id="bai9"> </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Bai 10 -->
+            <section>
+                <div class="row">
+                    <i class="fas fa-dragon icon-dragon"></i>
+                    <div class="title">
+                        <p>BT10 : Viết chương trình tạo form HTML nhập 2 số và in ra giá trị là số nguyên tố giữa 2 số đó</p>
+                        <div class="title-link">
+                            <i class="fas fa-chevron-down"></i>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="row content">
+                    <div class="col-6">
+                        <input type="text" placeholder="Vui long nhap a" class="input" id="text10a">
+                        <input type="text" placeholder="Vui long nhap b" class="input" id="text10b">
+                        <button class="btn" onclick="Bai10()">
+                            Xem kết quả
+                        </button>
+                    </div>
+                    <div class="col-6">
+                        <div id="bai10"> </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- Bai 1 -->
+        <script>
+            function startTime() 
+            {
+                var today = new Date();
+                document.getElementById('timer').innerHTML = today.toLocaleDateString() +"     "+today.toLocaleTimeString();
+                var t = setInterval(function() {                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
+                    startTime();
+                }, 1000);
+            }
+        </script>
+
+        <!-- Bai 2 -->
+        <script>
+            function Bai2() {
+                var today = new Date();
+                var d = today.getDate();
+                var m = today.getMonth()+1;
+                var y = today.getFullYear();
+                document.getElementById('dd/mm/yyyy').innerHTML ="dd/mm/yyyy:" + (d + "/" + m + "/" + y);
+                document.getElementById('mm/dd/yyyy').innerHTML ="mm/dd/yyyy:" + (m + "/" + d + "/" + y);
+            }
+        </script>
+
+        <!-- Bai 3 -->
+        <script>
+            function Bai3() {
+                let text = document.getElementById('text').value;
+                let num1 = "" + text;
+                let dem = 0;
+                for (let i = 0; i < num1.length; i++) {
+                    if (num1[i] <= num1[i + 1]) {
+                    dem++;
+                }
+                }
+                if (dem == num1.length-1) {
+                    document.getElementById('bai3').innerHTML = "chuoi tang";
+                } else {
+                    document.getElementById('bai3').innerHTML = "chuoi khong tang";
+                }
+            }
+        </script>
+
+        <!-- Bai 4 -->
+        <script>
+            function Bai4() {
+                let text4 = document.getElementById('text4').value;
+                let s = "";
+                for (let i = 0; i < text4.length; i++) {
+                    s += (String.fromCharCode(text4[i].charCodeAt() + 1));
+                }
+                document.getElementById('bai4').innerHTML = s;
+            }
+        </script>
+
+        <!-- Bai 5 -->
+        <script>
+            function Bai5() {
+                let text5 = document.getElementById('text5').value;
+                let s = "";
+                for (let i = text5.length / 2 - 0.5 - 1; i <= text5.length / 2 + 0.5; i++) {
+                    s += text5[i];
+                }
+                document.getElementById('bai5').innerHTML = s;
+            }
+        </script>
+
+        <!-- Bai 6 -->
+        <script>
+            function Bai6() {
+                let text6 = document.getElementById('text6').value;
+                let s1 = "";
+                let count = 0;
+                function check(s, text6) {
+                    let n = 0;
+                    for (let i = 0; i < text6.length; i++) {
+                        if (text6[i] == s) n++;
+                    }
+                    return n;
+                }
+                for (let i = 0; i < text6.length; i++) {
+                    if (text6[i] >= 0 && text6[i] != s1 && check(text6[i], text6) > count) {
+                        s1 = text6[i];
+                        count = check(text6[i], text6);
+                    }
+                }
+                document.getElementById('bai6').innerHTML = s1;
+            }
+        </script>
+
+        <!-- Bai 7 -->
+        <script>
+            function Bai7() {
+                let text7 = document.getElementById('text7').value;
+                let pos = text7.search("&#39");   
+                if (pos >= 0) {
+                    document.getElementById('bai7').innerHTML = "Yes";
+                }  else {
+                    document.getElementById('bai7').innerHTML = "No";
+                }
+            }
+        </script>
+
+        <!-- Bai 8 -->
+        <script>
+            function Bai8() {
+                let months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+                let text8 = document.getElementById('text8').value;
+                document.getElementById('bai8').innerHTML = months[text8 - 1];
+            }
+        </script>
+
+        <!-- Bai 9 -->
+        <script>
+            function Bai9() {
+                let text9 = document.getElementById('text9').value+ " ";
+                let start= 0;
+                let end = 0;
+                let s ="";
+                for( let i=0; i<= text9.length; i++)
+                {
+                   if (text9[i] == " ") {
+                       end = i ;
+                       if ( text9.slice(start, end).length > s.length) s = text9.slice(start, end);
+                       start = end + 1;
+                   }
+                }
+                document.getElementById('bai9').innerHTML = s;
+            }
+        </script>
+
+        <!-- Bai 10 -->
+        <script>
+            function ktnguyento(n) {
+                if (n < 2) {
+                    return 1;
+                }
+                for (let i = 2; i <= Math.sqrt(n); i++) {
+                    if (n % i == 0) return 1;
+                }
+                return 0;
+            }
+            function Bai10() {
+                let a = document.getElementById('text10a').value;
+                let b = document.getElementById('text10b').value; 
+                for (let i = a; i < b; i++) {
+                    if (ktnguyento(i) == 0) {
+                        document.getElementById('bai10').innerHTML += i +"  ";
+                    }     
+                }
+            }
+        </script>
+
+        <!-- Event Click Arrow Icon -->
+        <script>
+                let headerItems = document.getElementsByClassName('title-link');
+                let contentItems = document.getElementsByClassName('content');
+                for (let i =0; i< contentItems.length ;i++)
+                {
+                    let headerItem = headerItems[i];
+                    let contentItem = contentItems[i];
+                    let contentHeight = contentItem.clientHeight;
+                    headerItem.onclick = function() {
+                        let isClosed = contentItem.clientHeight === contentHeight;
+                        if (isClosed) {
+                            contentItem.style.height = '100px';
+                            contentItem.style.borderBottom ="1px solid #000";
+                        } else {
+                            contentItem.style.height = null;
+                            contentItem.style.borderBottom ="0px solid #000";
+                        }
+                    }
+                }
+        </script>
+    </body>
+</html>
