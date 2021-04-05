@@ -52,8 +52,7 @@
                         </button>
                     </div>
                     <div class="col-6">
-                        <div id="dd/mm/yyyy"> </div>
-                        <div id="mm/dd/yyyy"></div>
+                        <div id="bai2"> </div>
                     </div>
                 </div>
             </section>
@@ -80,7 +79,7 @@
                     </button>
                     </div>
                     <div class="col-6">
-                        <div id="bai3"> </div>
+                        <input type="text" id="bai3" class="input">
                     </div>
                 </div>
             </section>
@@ -107,7 +106,7 @@
                     </button>
                     </div>
                     <div class="col-6">
-                        <div id="bai4"> </div>
+                        <input type="text" id="bai4" class="input">
                     </div>
                 </div>
             </section>
@@ -134,7 +133,7 @@
                     </button>
                     </div>
                     <div class="col-6">
-                        <div id="bai5"> </div>
+                        <input type="text" id="bai5" class="input">
                     </div>
                 </div>
             </section>
@@ -159,7 +158,7 @@
                     </button>
                     </div>
                     <div class="col-6">
-                        <div id="bai6"> </div>
+                        <input type="text" id="bai6" class="input">
                     </div>
                 </div>
             </section>
@@ -169,7 +168,7 @@
                 <div class="row">
                     <i class="fas fa-dragon icon-dragon"></i>
                     <div class="title">
-                        <P>BT7 : Viết chương trình để kiểm tra xem chuỗi chứa &#/39;java\&\#39; hay không </P>
+                        <P>BT7 : Viết chương trình để kiểm tra xem chuỗi chứa java hay không </P>
                         <div class="title-link">
                             <i class="fas fa-chevron-down"></i>
                         </div>
@@ -184,7 +183,7 @@
                     </button>
                     </div>
                     <div class="col-6">
-                        <div id="bai7"> </div>
+                        <input type="text" id="bai7" class="input">
                     </div>
                 </div>
             </section>
@@ -209,7 +208,7 @@
                     </button>
                     </div>
                     <div class="col-6">
-                        <div id="bai8"> </div>
+                        <input type="text" id="bai8" class="input">
                     </div>
                 </div>
             </section>
@@ -234,7 +233,7 @@
                     </button>
                     </div>
                     <div class="col-6">
-                        <div id="bai9"> </div>
+                        <input type="text" id="bai9" class="input">
                     </div>
                 </div>
             </section>
@@ -260,7 +259,7 @@
                         </button>
                     </div>
                     <div class="col-6">
-                        <div id="bai10"> </div>
+                        <input type="text" id="bai10" class="input">
                     </div>
                 </div>
             </section>
@@ -286,8 +285,8 @@
                 var d = today.getDate();
                 var m = today.getMonth()+1;
                 var y = today.getFullYear();
-                document.getElementById('dd/mm/yyyy').innerHTML ="dd/mm/yyyy:" + (d + "/" + m + "/" + y);
-                document.getElementById('mm/dd/yyyy').innerHTML ="mm/dd/yyyy:" + (m + "/" + d + "/" + y);
+                document.getElementById('bai2').innerHTML ="dd/mm/yyyy:" + "<br>"+(d + "-" + m + "-" + y) + "<br>"+(d + "/" + m + "/" + y)
+                + "<br>" + "mm/dd/yyyy:" + "<br>" + (m + "-" + d + "-" + y) + "<br>"+(m + "/" + d + "/" + y) ;
             }
         </script>
 
@@ -303,9 +302,11 @@
                 }
                 }
                 if (dem == num1.length-1) {
-                    document.getElementById('bai3').innerHTML = "chuoi tang";
+                    // document.getElementById('bai3').innerHTML = "chuoi tang";
+                    document.getElementById('bai3').value = "chuoi tang";
                 } else {
-                    document.getElementById('bai3').innerHTML = "chuoi khong tang";
+                    // document.getElementById('bai3').innerHTML = "chuoi khong tang";
+                    document.getElementById('bai3').value = "chuoi khong tang";
                 }
             }
         </script>
@@ -318,7 +319,8 @@
                 for (let i = 0; i < text4.length; i++) {
                     s += (String.fromCharCode(text4[i].charCodeAt() + 1));
                 }
-                document.getElementById('bai4').innerHTML = s;
+                // document.getElementById('bai4').innerHTML = s;
+                document.getElementById('bai4').value = s;
             }
         </script>
 
@@ -330,7 +332,8 @@
                 for (let i = text5.length / 2 - 0.5 - 1; i <= text5.length / 2 + 0.5; i++) {
                     s += text5[i];
                 }
-                document.getElementById('bai5').innerHTML = s;
+                // document.getElementById('bai5').innerHTML = s;
+                document.getElementById('bai5').value = s;
             }
         </script>
 
@@ -353,7 +356,7 @@
                         count = check(text6[i], text6);
                     }
                 }
-                document.getElementById('bai6').innerHTML = s1;
+                document.getElementById('bai6').value = s1;
             }
         </script>
 
@@ -361,12 +364,12 @@
         <script>
             function Bai7() {
                 let text7 = document.getElementById('text7').value;
-                let pos = text7.search("&#39");   
+                let pos = text7.search("java");   
                 if (pos >= 0) {
-                    document.getElementById('bai7').innerHTML = "Yes";
+                    document.getElementById('bai7').value = "Yes";
                 }  else {
-                    document.getElementById('bai7').innerHTML = "No";
-                }
+                    document.getElementById('bai7').value = "No";
+                }l
             }
         </script>
 
@@ -375,7 +378,7 @@
             function Bai8() {
                 let months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
                 let text8 = document.getElementById('text8').value;
-                document.getElementById('bai8').innerHTML = months[text8 - 1];
+                document.getElementById('bai8').value = months[text8 - 1];
             }
         </script>
 
@@ -394,7 +397,7 @@
                        start = end + 1;
                    }
                 }
-                document.getElementById('bai9').innerHTML = s;
+                document.getElementById('bai9').value = s;
             }
         </script>
 
@@ -410,13 +413,15 @@
                 return 0;
             }
             function Bai10() {
+                let s = " ";
                 let a = document.getElementById('text10a').value;
                 let b = document.getElementById('text10b').value; 
                 for (let i = a; i < b; i++) {
                     if (ktnguyento(i) == 0) {
-                        document.getElementById('bai10').innerHTML += i +"  ";
+                        s+= i + ' ';
                     }     
                 }
+                document.getElementById('bai10').value = s;
             }
         </script>
 
@@ -426,13 +431,18 @@
                 let contentItems = document.getElementsByClassName('content');
                 for (let i =0; i< contentItems.length ;i++)
                 {
+                    contentItems[i].style.height = null;
+                }
+                for (let i =0; i< contentItems.length ;i++)
+                {
                     let headerItem = headerItems[i];
                     let contentItem = contentItems[i];
                     let contentHeight = contentItem.clientHeight;
+                    
                     headerItem.onclick = function() {
                         let isClosed = contentItem.clientHeight === contentHeight;
                         if (isClosed) {
-                            contentItem.style.height = '100px';
+                            contentItem.style.height = '120px';
                             contentItem.style.borderBottom ="1px solid #000";
                         } else {
                             contentItem.style.height = null;
