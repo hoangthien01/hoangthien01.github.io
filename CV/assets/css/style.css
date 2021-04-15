@@ -550,9 +550,9 @@ html {
 #portfolio {
     position: relative;
 }
-.portfolio-content .portfolio-wrapper:focus + .lightbox {
+/* .portfolio-content .portfolio-wrapper:focus + .lightbox {
     display: block;
-}
+} */
 
 .lightbox {
     width: 100%;
