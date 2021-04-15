@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS co ban</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="load()">
+    <div class="container">
+        <form action="" id="form">
+            <div class="header">
+                <div class="item">
+                    <label for="itemName">Item Name</label>
+                    <input type="text" class="input" id="itemName" maxlength="9">
+                    <p class="notice">Name is required</p>
+                    <output name="x" for="itemName"></output>
+                </div>
+                <div class="item">
+                    <label for="select">Category</label>
+                    <select name="" id="select" class="input">
+                        <option value="-1">No selected</option>
+                        <option value="Category 1">Category 1</option>
+                        <option value="Category 2">Category 2</option>
+                        <option value="Category 3">Category 3</option>
+                    </select>
+                    <p class="notice">Category is required</p>
+                </div>
+                <div class="item">
+                    <input type="file" name="Choose file" id="inpFile" accept="image/jpeg,image/png">
+                    <div class="image-preview" id="imagePreview">
+                        <img src="" class="image-preview__image">
+                        <span class="image-preview__default-text">Image Preview</span>
+                    </div>
+                </div>
+                <div class="item">
+                    <input type="submit" value="Submit form" required class="btn btn-submit" id="submit">
+                </div>
+            </div>
+        </form>
+        <div style="padding: 10px 30px 0 30px;">
+            <ul id="input-group" style="width: 100%;">
+                <li class="item-row">
+                    <div class="item1">#</div>
+                    <div class="item2">ItemName</div>
+                    <div class="item2">Category</div>
+                    <div class="item2">Image</div>
+                    <div class="item1">Action</div>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
