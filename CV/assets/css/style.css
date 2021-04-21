@@ -9,6 +9,31 @@ html {
     font-family: "Open Sans", sans-serif;
 }
 
+:root {
+    --blue: #007bff;
+    --cyan: #17a2b8;
+    --danger: #dc3545;
+    --dark: #343a40;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --green: #28a745;
+    --indigo: #6610f2;
+    --info: #17a2b8;
+    --light: #f8f9fa;
+    --orange: #fd7e14;
+    --pink: #e83e8c;
+    --primary: #007bff;
+    --purple: #6f42c1;
+    --red: #dc3545;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --teal: #20c997;
+    --warning: #ffc107;
+    --white: #fff;
+    --yellow: #ffc107;
+    --color: #dc3545;
+}
+
 
 /* Grid layout */
 
@@ -21,8 +46,6 @@ html {
 .row {
     display: flex;
     flex-wrap: wrap;
-    /* margin-left: -8px;
-    margin-right: -8px; */
 }
 
 .col-4 {
@@ -80,10 +103,6 @@ html {
 }
 
 .container {
-    /* height: 100vh; */
-    /* width: 100%; */
-    /* display: grid; */
-    /* margin-left: 235px; */
     width: 100%;
 }
 
@@ -321,7 +340,6 @@ html {
     margin-bottom: 16px;
 }
 
-.about-content {}
 
 .content-subtitle {
     font-size: 22px;
@@ -393,8 +411,6 @@ html {
 
 /* Education */
 
-.education-content {}
-
 .education-content-info {
     margin-bottom: 64px;
 }
@@ -443,7 +459,6 @@ html {
     line-height: 0;
     background-color: #e9ecef;
     border-radius: 0.25rem;
-    /* border: 1px solid #fc818d; */
 }
 
 .level-bar-inside {
@@ -471,12 +486,10 @@ html {
 
 .portfolio-content {
     position: relative;
-    justify-content: space-around;
+    
 }
 
 .portfolio-item {
-    /* position: relative; */
-    /* height: 425px; */
     cursor: pointer;
     margin-bottom: 30px;
     overflow: hidden;
@@ -498,7 +511,6 @@ html {
     align-items: center;
     width: 100%;
     height: 100%;
-    /* height: 425px; */
 }
 
 .portfolio-wrapper:before {
@@ -550,9 +562,6 @@ html {
 #portfolio {
     position: relative;
 }
-/* .portfolio-content .portfolio-wrapper:focus + .lightbox {
-    display: block;
-} */
 
 .lightbox {
     width: 100%;
@@ -569,12 +578,9 @@ html {
 }
 
 .lightbox-wrapper {
-    /* height: 100%; */
     width: 100%;
     margin: 60px auto;
     max-width: 1200px;
-    
-    /* padding: 60px 180px; */
 }
 
 .lightbox-img {
@@ -844,7 +850,6 @@ html {
     background-color: #f7f7f7;
 }
 
-.contact-form {}
 .form-control {
     background-color: #fff;
     outline: none;
@@ -855,7 +860,6 @@ html {
     padding: 9px 14px;
     width: 100%;
     display: block;
-    /* transition: border-color .15s ease-in-out, box-shadow .15s; */
 }
 .form-control:focus {
     border-bottom: 1px solid #dc3545;
@@ -903,10 +907,6 @@ html {
     margin-bottom: 20px;
 }
 .mini-footer {
-    /* display: block; */
-    /* tai sao can block de can giau copyright */
-    /* text-align: center; */
-    
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -954,5 +954,101 @@ html {
     font-size: 14px;
 }
 .copyright-notice span {
+    color: var(--color);
+}
+
+/* .arrow-up */
+.arrow-up {
+    background-color: #fff;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position: fixed;
+    right: 10px;
+    bottom: 20px;
+    display: block;
+}
+
+.arrow-up i {
     color: #dc3545;
+    font-size: 30px;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    position: absolute;
+} 
+
+/* tool */
+
+.tool-wrapper {
+    position:fixed;
+    right: 0px;
+    top: 25%;
+    right: -200px;
+    z-index: 999;
+    transition: all .4s ease-in-out;
+}
+
+.ani {
+    transform: translateX(-200px);
+    --color : --blue;
+}
+
+.tool-toggler {
+    position: absolute;
+    width: 37px;
+    height: 37px;
+    display: block;
+    cursor: pointer;
+    left: -37px;
+    top: 10%;
+    background-color: #fff;
+    color: #111;
+    text-align: center;
+}
+
+.tool-toggler i {
+    line-height: 37px;
+    animation: abc 2s infinite linear;
+}
+
+.tool-box {
+    width: 200px;
+    padding: 20px 16px;
+    background-color: #fff;
+    color: #111;
+}
+
+.list-color {
+    list-style: none;
+}
+
+.item-color {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: 3px 1px;
+}
+
+.buy-btn {
+    display: inline-block;
+    background-color: #0f8a26;
+    font-weight: 300;
+    padding: 6px 20px;
+    letter-spacing: 0.5px;
+    font-size: 14px;
+    border-radius: 30px;
+}
+
+.buy-link {
+    text-decoration: none;
+    color: #fff;
+}
+
+@keyframes abc {
+    100% {
+        transform: rotate(360deg);
+    }
 }
