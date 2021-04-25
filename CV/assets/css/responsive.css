@@ -4,6 +4,9 @@
     #navbar-mobile {
         display: none;
     }
+    #mouse{
+        display: block;
+    }
 }
 
 @media (max-width: 1199.98px) {

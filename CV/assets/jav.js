@@ -1,14 +1,17 @@
 
+// typed
+let data = [];
 $('document').ready(function () {
     let typed = new Typed("#typed ", {
         stringsElement: '#typed-strings',
-        typeSpeed: 50,
+        typeSpeed: 50,  
         backSpeed: 50,
         loop: true,
         cursorChar: ''
     });
 });
 
+// portfolio
 $(document).ready(function() {
     $('.portfolio-list-item').click(function() {
         const value = $(this).attr('data-filter');
@@ -25,12 +28,14 @@ $(document).ready(function() {
   
 })
 
+//active class
 $(document).ready(function() {
     $('.navbar-item').click(function() {
         $(this).addClass('active').siblings().removeClass('active');
     })
 })
 
+//Slide blog
 $('.owl-carousel').owlCarousel({
     loop:true,
     margin:20,
@@ -52,15 +57,16 @@ $('.owl-carousel').owlCarousel({
     }
 })
 
-var navbarMobile = document.getElementById('navbar-mobile');
-var mobileMenu = document.getElementById('mobile-menu');
-var navbarHeight = navbarMobile.clientHeight;
+// Show list menu
+let navbarCollapse = document.getElementById('navbar-collapse')
+let mobileMenu = document.getElementById('mobile-menu');
+let navbarHeight = navbarCollapse.clientHeight;
 mobileMenu.onclick = function () {
-    var isClosed = navbarMobile.clientHeight === navbarHeight;
+    var isClosed = navbarCollapse.clientHeight === navbarHeight;
     if (isClosed) {
-        navbarMobile.style.height = 'auto';
+        navbarCollapse.style.height = '290px';
     } else {
-        navbarMobile.style.height = null;
+        navbarCollapse.style.height = null;
     }
 }
 //  Tự động ẩn Menu khi click vào menuItem
@@ -68,10 +74,11 @@ var menuItems = document.querySelectorAll('#navbar-mobile li a[href*="#"]');
 for (var i = 0; i < menuItems.length; i++) {
     var menuItem = menuItems[i];
     menuItem.onclick = function (event) {
-        navbarMobile.style.height = null;
+        navbarCollapse.style.height = null;
     }
 }
 
+// show lightbox
 let portfolioItems = document.getElementsByClassName("portfolio-wrapper");
 let lightBoxBtn = document.getElementsByClassName("lightbox");
 let closeItems = document.getElementsByClassName("lightbox-link");
@@ -92,43 +99,61 @@ $("#form-info").submit((e) => {
     e.preventDefault();
 })
 
-// let obj = {
-//     "data" : []
-// };
-let data = [];
-let nam= document.getElementById('name');
-let email= document.getElementById('email');
-let subject= document.getElementById('subject');
-let message= document.getElementById('message');
-
-
-$('.contact-submit').click(function(){
+// user-info
+$($('.contact-submit')[0]).click(function(){
+    let name= document.getElementById('name');
+    let email= document.getElementById('email');
+    let subject= document.getElementById('subject');
+    let message= document.getElementById('message');
+    if (!data) data = [];
     data.push({
-        "name" : nam.value,
+        "name" : name.value,
         "email" : email.value,
         "subject" : subject.value,
         "message" : message.value
-
     });
     const setjson = JSON.stringify(data);
     localStorage.setItem("item", setjson);
-    nam.value ="";
+    name.value ="";
     email.value = "";
     subject.value ="";
     message.value = "";
 }) 
+function load() {
+    let obj = JSON.parse(localStorage.getItem("item"));
+    data = obj;
+}
 
-
+//setting-color
 $(".tool-toggler").click(function() {
     $(".tool-wrapper").toggleClass("ani");
 })
 
-
-function load() {
-    let obj = JSON.parse(localStorage.getItem("item"));
-    // for (let j = 0; j < obj.length; j++) {
-    //     data[j] = obj[j];
-    // }
-    console.log(obj)
-    data = obj;
+// change color
+let items = document.getElementsByClassName("item-color");
+for(let i=0; i<items.length;i++)
+{
+    let item = items[i];
+    item.onclick = function() {
+        $(document.body).css("--color",$(item).css("background-color"));
+    }
 }
+
+
+
+//scroll-active
+// window.addEventListener('scroll', () => {
+//     let navigationLinks = document.querySelectorAll('.navbar-list li a');
+//     let fromTop = window.scrollY;
+//     navigationLinks.forEach(link => {
+//         let section = document.querySelector(link.hash);
+//         if (
+//             section.offsetTop <= fromTop &&
+//             section.offsetTop + section.offsetHeight > fromTop)
+//         {
+//             link.classList.add('active');
+//         } else {
+//             link.classList.remove('active');
+//         }
+//     });
+// });

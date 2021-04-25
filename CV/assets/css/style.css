@@ -150,12 +150,12 @@ html {
 }
 
 .home-name span {
-    color: #D63645;
+    color: var(--color);
 }
 
 .home-headline {
     font-size: 32px;
-    color: #dc3545;
+    color: var(--color);
 }
 
 #typed-strings {
@@ -166,8 +166,52 @@ html {
     font-size: 32px;
     display: inline;
 }
+#mouse{
+    display: none;
+}
+.home-mouse {
+    bottom: 20px;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    width: 29px;
+    height: 42px;
+}
 
+.mouse-shape {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.45);
+    border-radius: 25px;
+    border: 1px solid #fff;
+}
 
+.mouse-wheel {
+    height:  9px;
+    width: 3px;
+    margin: auto;
+    border-radius: 5px;
+    background-color: #ccc;
+    animation-name: scrool;
+    animation-duration: 1.3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes scrool {
+    0% {
+       margin-top: 4px;
+       opacity: 0.8;
+    }
+    75% {
+        margin-top: 18px;
+       opacity: 0.5;
+    } 
+    90% {
+        margin-top: 20px;
+        opacity: 0.2;
+    }
+}
 /* Navbar */
 
 .navbar {
@@ -229,7 +273,7 @@ html {
 }
 
 .navbar-item.active a {
-    color: #dc3545;
+    color: var(--color);
 }
 
 .navbar-item__link {
@@ -243,7 +287,7 @@ html {
 
 .active,
 .navbar-item__link:hover {
-    color: #dc3545;
+    color: var(--color);
 }
 
 
@@ -262,14 +306,25 @@ html {
     left: 0;
     right: 0;
     position: fixed;
-    width: 100%;
+    /* width: 100%; */
     height: 58px;
-    background-color: #000;
-    overflow: hidden;
+    line-height: 58px;
+    background-color: #222;
+    /* overflow: hidden; */
     z-index: 999;
     font-weight: 500;
+    padding: 14px 26px;
 }
 
+#navbar-collapse {
+    height: 0;
+    top: 0;
+    background-color: #222;
+    width: 200px;
+    overflow: hidden;
+    transition: height 0.5s;
+    /* display: none; */
+}
 .mobile-list {
     list-style: none;
     font-size: 14px;
@@ -277,13 +332,12 @@ html {
 
 .mobile-item {
     display: block;
-    width: 100%;
 }
 
-.mobile-item:hover .mobile-item-link {
+/* .mobile-item:hover .mobile-item-link {
     background-color: #ccc;
     color: #000;
-}
+} */
 
 .mobile-item-link {
     color: #fff;
@@ -297,19 +351,17 @@ html {
     background-color: #333;
     border-color: #222;
     border-radius: 3px;
+    display: block;
+    font-size: 14px;
+    outline: 0;
+    padding: 4px 10px;
+    position: relative;
     color: #fff;
-    position: absolute;
-    top: 0;
-    right: 0;
-    height: 58px;
-    line-height: 58px;
-    padding: 0 21px;
-    font-size: 20px;
 }
 
-.menu-icon {
+/* .menu-icon {
     font-size: 20px;
-}
+} */
 
 
 /* About */
@@ -343,7 +395,7 @@ html {
 
 .content-subtitle {
     font-size: 22px;
-    color: #dc3545;
+    color: var(--color);
     margin-bottom: 8px;
 }
 
@@ -378,7 +430,7 @@ html {
 }
 
 .content-info .single-info a {
-    color: #dc3545;
+    color: var(--color);
     text-decoration: none;
 }
 
@@ -394,9 +446,9 @@ html {
 }
 
 .content-dowmload {
-    background-color: #dc3545;
+    background-color: var(--color);
     margin-right: 16px;
-    border: 1px solid #dc3545;
+    border: 1px solid var(--color);
     text-decoration: none;
     color: #fff;
 }
@@ -431,7 +483,7 @@ html {
 }
 
 .education-content-info .col-5 p {
-    color: #dc3545;
+    color: var(--color);
 }
 
 
@@ -462,7 +514,7 @@ html {
 }
 
 .level-bar-inside {
-    background-color: #dc3545;
+    background-color: var(--color);
     height: 20px;
 }
 
@@ -549,14 +601,14 @@ html {
 }
 
 .portfolio-info span {
-    color: #dc3545;
+    color: var(--color);
     font-size: 14px;
     font-weight: 600;
 }
 
 .active1 {
-    color: #dc3545;
-    border-bottom: 1px solid #dc3545;
+    color: var(--color);
+    border-bottom: 1px solid var(--color);
 }
 
 #portfolio {
@@ -575,6 +627,7 @@ html {
     position: fixed;
     padding-top: auto;
     padding-bottom: auto;
+    cursor: default;
 }
 
 .lightbox-wrapper {
@@ -596,6 +649,7 @@ html {
     right: 20px;
     width: 50px;
     height: 50px;
+    cursor: pointer;
 }
 .lightbox-link i {
     color: #000;
@@ -647,7 +701,7 @@ html {
 
 
 .visit-btn {
-    background-color: #dc3545;
+    background-color: var(--color);
     text-decoration: none;
     color: #fff;
 }
@@ -672,7 +726,7 @@ html {
 }
 
 .service-icon {
-    color: #dc3545;
+    color: var(--color);
     font-size: 50px;
     margin-bottom: 22px;
     display: inline-block;
@@ -713,7 +767,7 @@ html {
 }
 
 .hire-btn {
-    background-color: #dc3545;
+    background-color: var(--color);
     color: #fff;
     float: right;
     text-decoration: none;
@@ -743,7 +797,7 @@ html {
 }
 
 .blog-post:hover {
-    border-bottom: 2px solid #dc3545;
+    border-bottom: 2px solid var(--color);
 }
 
 .blog-post:hover .blog-post-link {
@@ -782,7 +836,7 @@ html {
 }
 
 .blog-post-link i {
-    color: #dc3545;
+    color: var(--color);
     transform: translate(-50%, -50%);
     top: 50%;
     left: 50%;
@@ -862,7 +916,7 @@ html {
     display: block;
 }
 .form-control:focus {
-    border-bottom: 1px solid #dc3545;
+    border-bottom: 1px solid var(--color);
 }
 .contact-message {
     height: 100px;
@@ -871,13 +925,12 @@ html {
     margin-bottom: 25px;
 }
 .contact-submit {
-    border: 1px solid #dc3545!important;
-    background-color: #fff;
+    border: none;
+    color: #fff;
+    background-color: var(--color);
     outline: none;
     cursor: pointer;
-}
-.contact-submit:hover {
-    background-color: #dc3545;
+    margin-left: 16px;
 }
 
 /* footer  */
@@ -902,7 +955,7 @@ html {
 }
 .info-icon {
     font-size: 40px;
-    color: #dc3545;
+    color: var(--color);
     display: inline-block;
     margin-bottom: 20px;
 }
@@ -965,12 +1018,13 @@ html {
     height: 50px;
     position: fixed;
     right: 10px;
-    bottom: 20px;
+    bottom: 30px;
     display: block;
+    z-index: 999;
 }
 
 .arrow-up i {
-    color: #dc3545;
+    color: var(--color);
     font-size: 30px;
     transform: translate(-50%,-50%);
     top: 50%;
@@ -991,7 +1045,7 @@ html {
 
 .ani {
     transform: translateX(-200px);
-    --color : --blue;
+    /* --color : --blue; */
 }
 
 .tool-toggler {
