@@ -29,11 +29,11 @@ $(document).ready(function() {
 })
 
 //active class
-$(document).ready(function() {
-    $('.navbar-item').click(function() {
-        $(this).addClass('active').siblings().removeClass('active');
-    })
-})
+// $(document).ready(function() {
+//     $('.navbar-item').click(function() {
+//         $(this).addClass('active').siblings().removeClass('active');
+//     })
+// })
 
 //Slide blog
 $('.owl-carousel').owlCarousel({
@@ -51,11 +51,12 @@ $('.owl-carousel').owlCarousel({
         576:{
             items:2
         },
-        1200:{
+        992:{
             items:3
         }
     }
 })
+
 
 // Show list menu
 let navbarCollapse = document.getElementById('navbar-collapse')
@@ -105,19 +106,37 @@ $($('.contact-submit')[0]).click(function(){
     let email= document.getElementById('email');
     let subject= document.getElementById('subject');
     let message= document.getElementById('message');
+    let submit = document.getElementById('sub');
     if (!data) data = [];
-    data.push({
-        "name" : name.value,
-        "email" : email.value,
-        "subject" : subject.value,
-        "message" : message.value
-    });
-    const setjson = JSON.stringify(data);
-    localStorage.setItem("item", setjson);
-    name.value ="";
-    email.value = "";
-    subject.value ="";
-    message.value = "";
+    if( name.value != "" && email.value  != "" && subject.value!="" &&
+        message.value != "")
+    {
+        data.push({
+            "name" : name.value,
+            "email" : email.value,
+            "subject" : subject.value,
+            "message" : message.value
+        });
+        const setjson = JSON.stringify(data);
+        localStorage.setItem("item", setjson);
+        submit.style.display = 'none';
+        $('.contact-wait')[0].style.display = 'block';
+        setTimeout(function(){
+            $('.contact-wait')[0].style.display = 'none';
+            $('.contact-success')[0].style.display = 'block';
+            $('.contact-feedback')[0].style.display = 'block';
+            name.value ="";
+                email.value = "";
+                subject.value ="";
+                message.value = "";
+        },2000)
+        setTimeout(function(){
+        submit.style.display = 'none';
+            submit.style.display = 'block';
+            $('.contact-success')[0].style.display = 'none';
+            $('.contact-feedback')[0].style.display = 'none';
+        },4000)
+    }
 }) 
 function load() {
     let obj = JSON.parse(localStorage.getItem("item"));
@@ -139,21 +158,19 @@ for(let i=0; i<items.length;i++)
     }
 }
 
-
-
 //scroll-active
-// window.addEventListener('scroll', () => {
-//     let navigationLinks = document.querySelectorAll('.navbar-list li a');
-//     let fromTop = window.scrollY;
-//     navigationLinks.forEach(link => {
-//         let section = document.querySelector(link.hash);
-//         if (
-//             section.offsetTop <= fromTop &&
-//             section.offsetTop + section.offsetHeight > fromTop)
-//         {
-//             link.classList.add('active');
-//         } else {
-//             link.classList.remove('active');
-//         }
-//     });
-// });
+window.addEventListener('scroll', () => {
+    let navigationLinks = document.querySelectorAll('.navbar-list li a');
+    let fromTop = window.scrollY;
+    navigationLinks.forEach(link => {
+        let section = document.querySelector(link.hash);
+        if (
+            section.offsetTop - 50 < fromTop &&
+            section.offsetTop + section.offsetHeight > fromTop + 50)
+        {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+});
