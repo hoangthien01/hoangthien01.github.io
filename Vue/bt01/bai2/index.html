@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai2</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+</head>
+<body>
+    <div id="app">
+        <h1>Services</h1>
+        <ul>
+            <li
+              v-for ="item in arr"
+              v-on:click="addPrice(item)"
+              v-bind:style="{
+                  backgroundColor: item.status ? 'rgb(125, 207, 125)' :  'rgb(223, 93, 115)'
+              }"
+            >
+            {{ item.name}}
+            <span>${{item.price}}</span>
+        </li>
+        </ul>
+        <div>
+            <span>Total</span>
+            <span>${{ totalPrice }}</span>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

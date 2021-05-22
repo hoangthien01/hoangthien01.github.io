@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bai3</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+</head>
+<body>
+    <div id="app">
+        <div class="nav">
+            <a  herf="#" :class="{active:changeLayout == true}"
+                v-on:click="changeLayout= true ">
+                <i class="fas fa-list"></i>
+            </a>
+            <a href="#" :class="{active:changeLayout == false}" 
+                v-on:click="changeLayout= false">
+                <i class="fas fa-border-none" ></i>
+            </a>
+        </div>
+        <div class="content">
+            <ul v-if="changeLayout == true" class="content-list">
+                <li v-for="item in articles" >
+                        <a :href="item.url" target="_blank">
+                            <div>
+                                <img :src="item.image.small" alt="">
+                                <span>{{item.title}}</span>
+                            </div>
+                        </a>
+                </li>
+            </ul>
+            <ul v-if="changeLayout == false" class="content-grid">
+                <li v-for="item in articles">
+                    <a :href="item.url" target="_blank">
+                        <img :src="item.image.large" alt="">
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>

@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#app {
+    width: 50%;
+    max-width: 800px;
+    margin: 130px auto 0 auto;
+    text-align: center;
+    font-weight: 600;
+}
+
+#app ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+
+}
+
+#app ul li {
+    background-color: rgb(74, 94, 206);
+    padding: 15px 20px;
+    cursor: pointer;
+    color: #fff;
+    display: inline-block;
+}
+
+#app p {
+    margin-top: 30px;
+    font-size: 22px;
+    color: #ccc;
+}
+
+#app p span {
+    background-color: rgb(74, 94, 206);
+    padding: 2px 6px;
+    border-radius: 2px;
+    color: #fff;
+    margin-left: 8px;
+}
