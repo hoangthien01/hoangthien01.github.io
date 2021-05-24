@@ -24,9 +24,9 @@
       <li v-for="item in arr" :class="{completed:item.done}">
         <div v-on:click="item.done = !item.done">
           <input type="checkbox" name="" class="checkbox" :checked="true ? item.done : item.done == false">
-          <span>
+          <label>
             {{ item.name }}
-          </span>
+          </label>
         </div>
         <a href="#" @click="editRow(item)" class="edit">
           <i class="fas fa-edit"></i>
@@ -34,7 +34,13 @@
         <button class="remove" v-on:click="removeFromArr(item)">x</button>
       </li>
     </ul>
-
+    <div class="footer">
+      <span>
+        <strong>{{notDone}}</strong>
+        item left
+      </span>
+      <a href="#" class="clearcompleted" v-on:click="clearCompleted">clear completed</a>
+    </div>
   </div>
   <script src="./script.js"></script>
 </body>

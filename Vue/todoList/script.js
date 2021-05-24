@@ -48,8 +48,17 @@ new Vue ({
             this.index = this.arr.findIndex(i=>i.name === item.name)
             console.log(this.index)
             this.currentInput = item.name
-            this.editAble = true
-            
+            this.editAble = true  
+        },
+        clearCompleted() {
+            this.arr = this.arr.filter(i=>i.done==false)
+            console.log( this.arr)
         }
+       
     },
+    computed: {
+        notDone() {
+            return this.arr.filter(m=>m.done == false).length
+        }
+    }
 })
