@@ -98,6 +98,12 @@ h3 {
     margin-bottom: 30px;
     cursor: pointer;
 }
+
+.item:hover h3 {
+    transform: scaleY(1.1);
+    text-decoration: underline;
+}
+
 .image {
     width: 200px;
     height: 200px;
