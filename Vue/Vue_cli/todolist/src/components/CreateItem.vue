@@ -1,10 +1,13 @@
 <template>
 <div>
     <div class="createitem">
-        <input type="text" class="inp"  autofocus placeholder="What needs to be done?"
+        <input type="text" class="inp" autofocus placeholder="What needs to be done?"
             v-model="currentInput"
+            v-on:keyup.enter="addItem" 
         >
-        <button class="btnCheck" @click="addItem">
+        <button class="btnCheck" 
+          @click="addItem"
+        >
             <i class="fas fa-chevron-right"></i>
         </button>
     </div>

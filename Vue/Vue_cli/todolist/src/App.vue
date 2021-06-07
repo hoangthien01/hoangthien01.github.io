@@ -3,7 +3,6 @@
     <button class="btn" :class="{active:currentLayout === 'Home'}" @click="btnClick('Home')">Home</button> /
     <button class="btn" :class="{active:currentLayout === 'Blogs'}" @click="btnClick('Blogs')">Blogs</button> /
     <Button class="btn" :class="{active:currentLayout === 'Contact'}" @click="btnClick('Contact')">Contact</Button>
-
     <div class="">
       <component v-bind:is="currentLayout" class="tab"></component>
     </div>

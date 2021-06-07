@@ -34,4 +34,8 @@ p {
     font-size: 18px;
     font-style: italic;
 }
+
+p:last-child {
+  margin-bottom: 30px;
+}
 </style>

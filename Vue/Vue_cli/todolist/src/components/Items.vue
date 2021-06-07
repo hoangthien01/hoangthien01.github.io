@@ -5,7 +5,7 @@
             :checked="true ? item.done : item.done == false"
             @change="markDone(index)"
           >
-          <span :class="{done:item.done}">{{item.name}}</span>
+          <span :class="{done:item.done}">{{item.name}} </span>
           <div class="action">
             <button class="btn-edit" @click="editItem(item)" >
                 <i class="fas fa-edit"></i>
