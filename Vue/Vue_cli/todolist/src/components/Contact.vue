@@ -22,7 +22,11 @@ export default {
 </script>
 
 <style scoped>
-
+div{
+  width: 80%;
+  max-width: 1000px;
+  margin: auto;
+}
 h1 {
     margin: 20px 0;
     font-size: 35px;

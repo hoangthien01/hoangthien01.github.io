@@ -1,69 +1,61 @@
 <template>
   <div id="app">
-    <button class="btn" :class="{active:currentLayout === 'Home'}" @click="btnClick('Home')">Home</button> /
-    <button class="btn" :class="{active:currentLayout === 'Blogs'}" @click="btnClick('Blogs')">Blogs</button> /
-    <Button class="btn" :class="{active:currentLayout === 'Contact'}" @click="btnClick('Contact')">Contact</Button>
-    <div class="">
-      <component v-bind:is="currentLayout" class="tab"></component>
+    <div id="nav">
+      <router-link to="/">Home</router-link> |
+      <router-link to="/blogs">Blogs</router-link> |
+      <router-link to="/contact">Contact</router-link>
+    </div>
+    <div class="tab">
+    <router-view/>
+
     </div>
   </div>
 </template>
 
 <script>
-import Home from './components/Home.vue'
-import Blogs from './components/Blogs.vue'
-import Contact from './components/Contact.vue'
-
-
+import {onBeforeMount} from 'vue'
+import { useRouter, useRoute } from 'vue-router'
+import firebase from 'firebase'
 export default {
-  name: 'App',
-  components: {
-    Home, Blogs, Contact
-  },
-  data() {
-    return {
-      currentLayout : "Home",
-    }
-  },
-  methods : {
-    btnClick(message) {
-      this.currentLayout = message
-    }
+  setup() {
+    const router = useRouter();
+    const route = useRoute();
+
+    onBeforeMount(() => {
+    firebase.auth().onAuthStateChanged((user) =>{
+      if(!user) {
+        router.replace('/login');
+      } else if (route.path == "/login" || route.path == "/register") {
+        router.replace('/');
+      }
+    });
+    });
   }
 }
 </script>
-
-<style >
-* {
-  font-family: 'Indie Flower', cursive;
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+<style>
 #app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
 }
-.btn {
-  background-color: #fff;
-  border: none;
-  text-decoration: underline;
-  font-size: 25px;
-  font-style: italic;
-  cursor: pointer;
-}
-.active {
-  color: green;
-}
-.layout {
-  width: 70%;
+
+#nav {
+  padding: 30px;
+  width: 80%;
   max-width: 1000px;
-  height: 600px;
-  border: 1px solid #000;
-  margin: 20px auto 0 auto;
+  margin: auto;
+}
+
+#nav a {
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+#nav a.router-link-exact-active {
+  color: #42b983;
 }
 .tab {
   width: 70%;
@@ -74,12 +66,4 @@ export default {
   margin: 20px auto 0 auto;
   padding: 0 35px;
 }
-
-@media (max-width: 991.98px) {
-   .tab {
-       width: 80%;
-   }
-   
-}
-
 </style>
