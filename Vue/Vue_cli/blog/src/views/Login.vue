@@ -51,17 +51,17 @@ export default {
 
 <style scoped>
 .wraper {
-  width: 100%;
+  /* width: 100%;
   height: 80vh;
   background-color: rgb(98, 184, 124);
   position: absolute;
   transform: translate(-50%, -50%);
   top: 50%;
-  left: 50%;
+  left: 50%; */
 }
 .login {
   width: 400px;
-  height: 450px;
+  height: 430px;
   position: absolute;
   transform: translate(-50%, -50%);
   top: 50%;
@@ -70,6 +70,7 @@ export default {
   padding: 30px;
   border: 1px solid #000;
   background-color: #fff;
+  border-radius: 8px;
   box-shadow: 5px 5px 15px -5px rgba(0, 0, 0, 0.85);
 }
 
@@ -128,7 +129,7 @@ export default {
   background-color: #fff;
 }
 .btn-submit:hover {
-  background-color: rgb(34, 70, 46);
+  background-color: rgb(31, 46, 36);
   color: #fff;
 }
 .more {

@@ -51,8 +51,8 @@ export default {
   padding-right: 100px;
 }
 .blog-image {
-  width: 30%;
-  height: 200px;
+  width: 35%;
+  max-height: 200px;
 }
 .blog-image img {
   width: 100%;
@@ -83,17 +83,17 @@ export default {
   text-decoration: underline;
 }
 .head {
-  font-size: 22px;
-  line-height: 27px;
+  font-size: 20px;
+  line-height: 24px;
   color: rgba(28, 28, 28, 0.5);
 }
 .title {
   font-family: Libre Baskerville;
   font-style: normal;
   font-weight: bold;
-  font-size: 38px;
+  font-size: 36px;
   color: #000000;
-  line-height: 41px;
+  line-height: 39px;
 }
 .sub-title {
   margin-top: 12px;

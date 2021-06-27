@@ -50,10 +50,6 @@ const routes = [
     component: () => import('../views/DetailBlog.vue'),
   },
   {
-    path: '/blog/(.*)',
-    component: () => import('../views/NotFound.vue')
-  },
-  {
     // will match everything
     path: '*',
     component: () => import('../views/NotFound.vue')

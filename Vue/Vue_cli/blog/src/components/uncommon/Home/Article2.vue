@@ -34,8 +34,8 @@ export default {};
   position: absolute;
   width: 35%;
   max-width: 509px;
-  /* height: 467px; */
-  height: 80%;
+  max-height: 480px;
+  height: 70%;
   background: #ffffff;
   padding: 76px 39px 0;
 }
@@ -44,7 +44,7 @@ export default {};
   top: 54px;
 }
 .head {
-  font-size: 22px;
+  font-size: 20px;
   line-height: 27px;
   color: rgba(28, 28, 28, 0.5);
 }
@@ -52,20 +52,20 @@ export default {};
   font-family: Libre Baskerville;
   font-style: normal;
   font-weight: bold;
-  font-size: 38px;
+  font-size: 33px;
   color: #000000;
-  line-height: 41px;
+  line-height: 37px;
 }
 .sub-title {
   margin-top: 12px;
-  font-size: 19px;
+  font-size: 17px;
   line-height: 22px;
   color: rgba(28, 28, 28, 0.5);
 }
 
 .description {
   margin-top: 14px;
-  font-size: 19px;
+  font-size: 17px;
   line-height: 24px;
   color: #000000;
 }

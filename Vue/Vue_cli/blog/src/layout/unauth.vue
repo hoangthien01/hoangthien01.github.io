@@ -20,9 +20,8 @@ export default {
 .unauth-layout {
     width: 100wh;
     height: 100vh;
-    background-color: #FFF;
+    background-image: url('../assets/image/login.jpeg');
     position: relative;
-    /* padding: 31px 25px 0; */
 }
 
 </style>

@@ -109,7 +109,8 @@ export default {
   flex: 1;
 }
 .image {
-  width: 425px;
+  max-width: 425px;
+  width: 50%;
   height: 298px;
   margin-right: 50px;
 }
