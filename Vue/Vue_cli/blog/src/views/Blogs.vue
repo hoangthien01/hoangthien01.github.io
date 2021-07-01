@@ -98,7 +98,7 @@ export default {
 <style scoped>
 .blogs-contain {
   margin-top: 74px;
-  padding: 0 250px;
+  padding: 0 130px 50px;
 }
 .blog-item {
   display: flex;
@@ -109,10 +109,11 @@ export default {
   flex: 1;
 }
 .image {
-  max-width: 425px;
+  max-width: 475px;
   width: 50%;
-  height: 298px;
+  max-height: 270px;
   margin-right: 50px;
+  overflow: hidden;
 }
 .image img {
   width: 100%;
@@ -144,4 +145,79 @@ export default {
   line-height: 24px;
   color: #000000;
 }
+@media (min-width: 576px) {  }
+
+@media (max-width: 767.98px) { 
+   .blogs-contain {
+  padding: 0 100px 50px;
+}
+.blog-item{
+  display: block;
+}
+.image {
+  margin: 0 auto;
+  width: 100%;
+}
+.blog-content {
+  margin-top: 20px;
+}
+.title{
+  font-size: 24px;
+  line-height: 27px;
+}
+.sub-title,.head,.description {
+  font-size: 16px;
+  line-height: 20px;
+}
+.description {
+  margin-top: 7px;
+}
+.sub-title {
+  margin-top: 5px;
+}
+ }
+
+@media (min-width: 768px) and (max-width: 991.98px) { 
+ .blogs-contain {
+  padding: 0 40px 50px;
+}
+.image {
+  margin-right: 0;
+  padding-right: 50px;
+}
+.title{
+  font-size: 22px;
+  line-height: 25px;
+}
+.sub-title,.head,.description {
+  font-size: 14px;
+  line-height: 17px;
+}
+.description {
+  margin-top: 7px;
+}
+.sub-title {
+  margin-top: 5px;
+}
+ }
+
+@media (min-width: 992px) and (max-width: 1199.98px)  {
+.blogs-contain {
+  padding: 0 100px 50px;
+}
+.title{
+  font-size: 26px;
+  line-height: 30px;
+}
+.sub-title,.head,.description {
+  font-size: 16px;
+  line-height: 20px;
+}
+.description {
+  margin-top: 7px;
+}
+.sub-title {
+  margin-top: 5px;
+}
+ }
 </style>

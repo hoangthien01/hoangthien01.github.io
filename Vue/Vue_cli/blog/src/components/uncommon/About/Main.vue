@@ -30,7 +30,7 @@
       </div>
     </div>
     <div class="content-wrap-3">
-      <div class="text-3" style="margin-right: 450px">
+      <div class="text-3" >
         <p class="title">We share the little moments that shows we’re alive.</p>
         <p class="description">
           Laboris consectetur sunt nulla eiusmod voluptate eiusmod dolor nisi
@@ -75,9 +75,16 @@ export default {};
   position: absolute;
   right: 85px;
   z-index: 1;
+  width: 40%;
+  overflow: hidden;
+}
+.image-1 img {
+  width: 100%;
+  object-fit: contain;
 }
 .text {
-  margin-right: 650px;
+  margin-left: 0;
+  width: 40%;
   padding-top: 20px;
 }
 .title {
@@ -94,36 +101,67 @@ export default {};
   margin-top: 13px;
 }
 .content-wrap-2 {
-  width: 557px;
-  margin: 70px 0 0 460px;
+  width: 40%;
+  margin-top: 70px;
+  margin-left: 35%;
   position: relative;
   z-index: 1000;
 }
 .image-2 {
   display: block;
   bottom: 110%;
+  width: 100%;
+  overflow: hidden;
+}
+.image-2 img {
+  width: 100%;
 }
 .content-wrap-3 {
-  margin: 200px 0 0 350px;
+  margin-left:25%;
+  margin-top: 15%;
+}
+.text-3 {
+  padding-right: 20%;
 }
 .image-3 {
   margin-top: 76px;
   display: flex;
   justify-content: space-between;
 }
+.image-3 img {
+  width: 100%;
+}
 .line-1 {
-  height: 1018px;
+  height: 50%;
   width: 8px;
   background-color: #ffffff;
   position: absolute;
-  right: 180px;
+  right: 15%;
 }
 .line-2 {
-  height: 1312px;
+  height: 60%;
   width: 8px;
   background-color: #ffffff;
   position: absolute;
-  left: 180px;
+  left: 15%;
   bottom: 0;
 }
+@media (min-width: 576px) {  }
+
+@media (max-width: 767.98px) {  }
+
+@media (min-width: 768px) and (max-width: 991.98px) { 
+
+ }
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+.title {
+  font-size: 28px;
+  line-height: 32px;
+}
+.description {
+  font-size: 18px;
+  line-height: 22px;
+}
+ }
 </style>

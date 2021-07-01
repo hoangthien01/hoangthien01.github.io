@@ -39,7 +39,7 @@ export default {
 }
 .content {
   width: 332px;
-  height: 186px;
+  max-height: 186px;
   position: absolute;
   transform: translate(-50%, -50%);
   top: 50%;
@@ -63,4 +63,28 @@ export default {
 .socials a:hover i {
   transform: scale(1.2);
 }
+@media (min-width: 576px) {  }
+
+@media (min-width: 768px) {  }
+
+@media (min-width: 992px) {  }
+
+@media (max-width: 1200px) {
+.footer {
+  height : 300px
+}
+.socials a {
+  font-size: 26px;
+}
+.desciption {
+  font-size: 17px;
+  line-height: 21px;
+}
+.title {
+  font-size: 40px;
+}
+
+
+}
+
 </style>

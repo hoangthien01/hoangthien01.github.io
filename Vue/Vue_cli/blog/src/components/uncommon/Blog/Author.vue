@@ -2,7 +2,9 @@
   <div class="author">
     <div class="left">
       <p>ABOUT THE AUTHOR</p>
-      <img src="../../../assets/image/Profile1.png" alt="" srcset="" />
+      <div class="image">
+        <img src="../../../assets/image/Profile1.png" alt="" srcset="" />
+      </div>
     </div>
     <div class="right">
       <p class="title">Arthur Black</p>
@@ -36,6 +38,14 @@ export default {
   line-height: 27px;
   color: rgba(28, 28, 28, 0.5);
 }
+.image {
+  width: 160px;
+  height: 160px;
+  object-fit: contain;
+}
+.image img {
+  width: 100%;
+}
 .right {
   width: 67%;
 }
@@ -58,4 +68,26 @@ export default {
   line-height: 22px;
   color: #1c1c1c;
 }
+@media (max-width: 767.98px) { 
+
+ }
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+ .image {
+  width: 130px;
+  height: 130px;
+}
+.left p {
+  font-size: 16px;
+}
+.title{ 
+  font-size: 35px;
+  line-height: 39px;
+}
+.description {
+  font-size: 16px;
+  line-height: 20px;
+}
+  }
+
 </style>

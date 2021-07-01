@@ -31,7 +31,7 @@ export default {
 
 <style scoped>
 .editor-pick {
-  width: 900px;
+  max-width: 900px;
   margin: 50px auto 0;
 }
 .editor-pick-head {
@@ -56,12 +56,12 @@ export default {
 }
 .image {
   width: 50%;
-  height: 300px;
+  max-height: 300px;
   margin-right: 50px;
+  overflow: hidden;
 }
 .image img {
   width: 100%;
-  height: 100%;
   object-fit: cover;
 }
 .head {
@@ -90,4 +90,47 @@ export default {
   line-height: 24px;
   color: #000000;
 }
+
+@media (min-width: 576px) {  }
+
+@media (max-width: 767.98px) {  }
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+.editor-pick-head {
+  font-size: 28px;
+  line-height: 30px;
+}
+.head,.description,.sub-title {
+  font-size: 17px;
+  line-height: 21px;
+}
+.title {
+  font-size: 28px;
+  line-height: 30px;
+}
+.sub-title {
+  margin-top: 5px;
+}
+.description {
+  margin-top: 7px;
+}
+  }
+
+@media (min-width: 992px) and (max-width: 1199.98px){
+.editor-pick-head {
+  font-size: 33px;
+  line-height: 37px;
+}
+.head,.sub-title,.description {
+  font-size: 18px;
+  line-height: 22px;
+}
+.title {
+  font-size: 33px;
+  line-height: 36px;
+}
+.description {
+  margin-top: 5px;
+}
+ }
 </style>

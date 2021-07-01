@@ -127,7 +127,8 @@ export default {
   margin-top: 74px;
 }
 .content {
-  width: 652px;
+  width: 70%;
+  max-width: 652px;
   margin: 54px auto 0;
 }
 .title {
@@ -155,4 +156,21 @@ export default {
   color: #000000;
   margin-top: 26px;
 }
+
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+ .title {
+   font-size: 40px;
+    line-height: 45px;
+
+ }
+ .sub-title,.tag {
+   font-size: 20px;
+ }
+.description{
+  font-size: 19px;
+    line-height: 24px;
+}
+  }
+
 </style>

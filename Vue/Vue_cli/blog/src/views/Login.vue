@@ -10,14 +10,12 @@
           class="form-control"
           type="text"
           placeholder="Username"
-          v-model="user"
           required
         />
         <input
           class="form-control"
           type="password"
           placeholder="Password"
-          v-model="password"
           required
         />
         <div class="subcontent">
@@ -50,15 +48,7 @@ export default {
 </script>
 
 <style scoped>
-.wraper {
-  /* width: 100%;
-  height: 80vh;
-  background-color: rgb(98, 184, 124);
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 50%;
-  left: 50%; */
-}
+
 .login {
   width: 400px;
   height: 430px;

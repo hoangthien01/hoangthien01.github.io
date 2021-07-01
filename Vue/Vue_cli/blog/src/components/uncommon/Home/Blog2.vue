@@ -51,12 +51,12 @@ export default {
   padding-right: 100px;
 }
 .blog-image {
-  width: 35%;
+  width: 40%;
   max-height: 200px;
+  overflow: hidden;
 }
 .blog-image img {
   width: 100%;
-  height: 100%;
   object-fit: cover;
 }
 .tag-contain {
@@ -66,7 +66,7 @@ export default {
 .tag-contain h4 {
   font-weight: bold;
   font-size: 22px;
-  line-height: 27px;
+  line-height: 40px;
   color: #1c1c1c;
 }
 .list-tags {
@@ -108,4 +108,64 @@ export default {
   line-height: 24px;
   color: #000000;
 }
+@media (min-width: 576px) {  }
+
+@media (max-width: 767.98px) {  }
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .recent-post-contain{
+    padding: 0 90px 50px;
+  }
+.recent-post {
+  display: block;
+}
+.blog-image {
+  width: 100%;
+}
+.blog-content {
+  margin-left: 0 !important;
+  margin-top: 20px;
+}
+.head,.description,.sub-title {
+  font-size: 17px;
+  line-height: 21px;
+}
+.title {
+  font-size: 28px;
+  line-height: 30px;
+}
+.sub-title {
+  margin-top: 5px;
+}
+.description {
+  margin-top: 7px;
+}
+  }
+
+@media (min-width: 992px) and (max-width: 1199.98px){
+.recent-post-contain{
+  padding: 0 50px 50px;
+}
+.sub-title {
+  margin-top: 0;
+}
+.title {
+  font-size:28px;
+  line-height: 32px;
+}
+.recent-post {
+  padding-right: 60px;
+}
+.head,.description,.sub-title {
+    font-size: 18px;
+  line-height: 24px;
+}
+.description {
+  margin-top: 5px;
+}
+.list-tags li {
+  font-size: 18px;
+  line-height: 40px;
+}
+ }
 </style>

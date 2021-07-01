@@ -21,7 +21,8 @@ export default {};
 }
 .info {
   position: absolute;
-  width: 450px;
+  width: 100%;
+  max-width: 450px;
   transform: translate(-50%, -50%);
   top: 50%;
   left: 50%;
@@ -39,5 +40,37 @@ export default {};
   text-align: center;
   color: #1c1c1c;
   padding: 0 20px;
+  margin-top: 5px;
 }
+
+@media (max-width: 767.98px) { 
+  .title {
+  font-size: 26px;
+}
+
+.description {
+    font-size: 17px;
+}
+ }
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+
+.title {
+  font-size: 32px;
+}
+
+.description {
+    font-size: 18px;
+}
+  }
+
+@media (min-width: 992px) and (max-width: 1199.98px){
+
+.title {
+  font-size: 38px;
+}
+.description {
+  font-size: 18px;
+}
+ }
 </style>

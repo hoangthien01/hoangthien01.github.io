@@ -24,7 +24,7 @@ export default {};
   overflow: hidden;
   position: relative;
   width: 100%;
-  height: 600px;
+  max-height: 600px;
 }
 .article img {
   width: 100%;
@@ -35,14 +35,12 @@ export default {};
   width: 35%;
   max-width: 509px;
   max-height: 480px;
-  height: 70%;
   background: #ffffff;
-  padding: 76px 39px 0;
-}
-.article-content-2 {
+  padding: 76px 40px 40px;
   right: 78px;
   top: 54px;
 }
+
 .head {
   font-size: 20px;
   line-height: 27px;
@@ -69,4 +67,45 @@ export default {};
   line-height: 24px;
   color: #000000;
 }
+@media (min-width: 576px) {  }
+
+@media (max-width: 767.98px) {  }
+
+@media (min-width: 768px) and (max-width: 991.98px) { 
+  .article-content-2 {
+  padding: 20px 10px;
+  top: 20px;
+}
+.title {
+  font-size: 19px;
+  line-height: 22px;
+}
+.sub-title,.description,.head {
+  font-size: 14px;
+  line-height: 18px;
+}
+.sub-title {
+  margin-top: 5px;
+}
+.description{
+  margin-top: 10px;
+}
+ }
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+.article-content-2{
+  padding: 40px 20px 30px;
+}
+.title {
+  font-size: 22px;
+  line-height: 26px;
+}
+.sub-title,.description,.head {
+  font-size: 15px;
+  line-height: 17px;
+}
+.sub-title {
+  margin-top: 5px;
+}
+ }
 </style>

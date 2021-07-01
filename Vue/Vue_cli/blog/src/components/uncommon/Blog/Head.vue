@@ -15,7 +15,6 @@ export default {
 .article {
   overflow: hidden;
   position: relative;
-  height: 600px;
   width: 80%;
   margin: 0 auto;
 }
@@ -23,4 +22,5 @@ export default {
   width: 100%;
   object-fit: cover;
 }
+
 </style>

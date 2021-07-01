@@ -83,6 +83,10 @@ export default {
   border-radius: 5px;
   cursor: pointer;
 }
+.btn-custom:hover {
+  transform: scale(0.95);
+  opacity: 0.9;
+}
 .memo {
   margin-top: 25px;
 }
@@ -93,8 +97,6 @@ export default {
 .total-views,
 .most-viewed {
   margin-left: 37px;
-  width: 176px;
-  height: 107px;
   border: 2px solid rgba(28, 28, 28, 0.35);
   border-radius: 10px;
   padding: 10px;
@@ -103,7 +105,7 @@ export default {
   flex: 1;
 }
 .most-viewed .info span {
-  font-size: 29px;
+  font-size: 27px;
   text-align: center;
   color: #1c1c1c;
 }
@@ -153,4 +155,31 @@ export default {
 .main-content-image img {
   width: 100%;
 }
+@media (max-width: 767.98px) { 
+
+ }
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .icon {
+    width: 25px;
+    height: 25px;
+  }
+  .text {
+    font-size: 28px;
+  }
+.title{
+  font-size: 16px;
+}
+.most-viewed .info span {
+  font-size: 18px;
+}
+
+  }
+
+@media (min-width: 992px) and (max-width: 1199.98px){
+
+.most-viewed .info span {
+  font-size: 20px;
+}
+ }
 </style>
