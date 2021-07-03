@@ -1,6 +1,6 @@
 <template>
 <div>
-  <Nav></Nav>
+  <Nav @searchUsers="searchUsersByName"></Nav>
   <div class="home-contain">
     <h1 class="title">List Users</h1>
     <div class="list-users">
@@ -27,11 +27,25 @@ export default {
       users: [],
     };
   },
+  methods: {
+    async searchUsersByName(nameUser) {
+       try {
+        const response = await axios.get(
+          "https://60db1cba801dcb0017290e71.mockapi.io/v1/users?name=" +
+            nameUser
+        );
+        this.users = response.data
+      } catch(error) {
+        console.log(error)
+      }
+    }
+  },
   async created() {
     const response = await axios.get(
       "https://60db1cba801dcb0017290e71.mockapi.io/v1/users"
     );
     this.users = response.data;
+        console.log('users');
     console.log(this.users);
   },
   components: {
