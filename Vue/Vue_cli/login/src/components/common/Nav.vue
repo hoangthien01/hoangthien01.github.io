@@ -1,7 +1,7 @@
 <template>
   <div class="nav-contain">
     <input type="text" class="form-control" v-model="inputSearch" />
-    <div class="search-icon">
+    <div class="search-icon" @click="search">
       <i class="fas fa-search"></i>
     </div>
     <div class="profile">
@@ -33,18 +33,27 @@ export default {
       user: {},
     };
   },
+   methods : {
+    search () {
+      this.$emit('searchUsers',this.inputSearch);
+    }
+  },
   computed: {
     currentUser () {
       return this.$store.getters.currentUser;
     }
   },
   async created() {
-    console.log(this.$route.params.id);
-    const response = await axios.get(
-      "https://60db1cba801dcb0017290e71.mockapi.io/v1/users/" +
-        this.currentUser
-    );
-    this.user = response.data;
+     try {
+      const response = await axios
+        .get(
+          "https://60db1cba801dcb0017290e71.mockapi.io/v1/users/" +
+            this.currentUser
+        )
+        this.user = response.data;
+    } catch(error) {
+      console.log(error)
+    }
   },
 };
 </script>
@@ -58,13 +67,11 @@ export default {
   justify-content: flex-end;
   padding: 0 30px;
   position: relative;
-  /* background-color: rgb(48, 48, 48); */
 }
 .form-control {
   width: 300px;
   padding: 8px 20px;
   background-color: rgb(48, 48, 48);
-  /* background-color: rgb(14, 13, 13); */
   outline: none;
   border: 1px solid#000;
   border-radius: 5px;
@@ -114,20 +121,18 @@ export default {
   position: absolute;
   width: 192px;
   background-color: rgb(48, 48, 48);
-  /* background-color: rgb(14, 13, 13); */
   right: 0px;
-  top: 140%;
+  top: 135%;
   border-radius: 8px;
   z-index: 1000;
-  overflow: hidden;
 }
 .profile-content::before {
   content: "";
   height: 30px;
   position: absolute;
   border: 25px solid;
-  border-color: transparent transparent rgb(14, 13, 13) transparent;
-  top: -70px;
+  border-color: transparent transparent  rgb(48, 48, 48) transparent;
+  top: -68px;
   right: 5px;
 }
 .title {
@@ -137,6 +142,7 @@ export default {
   padding: 10px 10px 0;
   cursor: default;
   user-select: none;
+  margin-bottom: 10px;
 }
 .list-setting {
   list-style: none;

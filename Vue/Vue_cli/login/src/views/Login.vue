@@ -42,20 +42,24 @@ export default {
     };
   },
   methods: {
-    async login() {
-      const response = await axios.get(
-        "https://60db1cba801dcb0017290e71.mockapi.io/v1/users?email=" +
-          this.email
-      );
-      response.data.forEach((user) => {
-        if (user.email === this.email && user.passWord == this.passWord) {
-            // this.$route.params.id = user.id;
-            this.$store.commit("SET_CURRENTUSER",user.id)
-            this.$router.push("/users");
-            console.log(user.id)
-        }
-      });
-      this.wrongPassWord = true;
+     async login() {
+      try {
+        const response = await axios.get(
+          "https://60db1cba801dcb0017290e71.mockapi.io/v1/users?email=" +
+            this.email
+        );
+        response.data.forEach((user) => {
+          if (user.email === this.email && user.passWord == this.passWord) {
+              // this.$route.params.id = user.id;
+              this.$store.commit("SET_CURRENTUSER",user.id)
+              this.$router.push("/users");
+              console.log(user.id)
+          }
+        });
+        this.wrongPassWord = true;
+      } catch(error) {
+        console.log(error)
+      }
     },
   },
 };
